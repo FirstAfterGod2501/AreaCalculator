@@ -18,6 +18,6 @@ public class Circle : IFigure
             return Math.PI * Math.Pow(_radius, 2d);
         }
 
-        throw new ArgumentException();
+        throw new ArgumentException("invalid radius");
     }
 }
