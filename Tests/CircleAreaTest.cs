@@ -1,4 +1,5 @@
-using AreaCalculator.Model;
+using AreaCalculator.Figures;
+using NUnit.Framework;
 
 namespace Tests;
 

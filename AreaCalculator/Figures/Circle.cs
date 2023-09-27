@@ -1,7 +1,6 @@
 using AreaCalculator.Interfaces;
 
-namespace AreaCalculator.Model;
-
+namespace AreaCalculator.Figures;
 
 public class Circle : IFigure
 {
@@ -18,6 +17,7 @@ public class Circle : IFigure
         {
             return Math.PI * Math.Pow(Radius, 2d);
         }
+
         throw new ArgumentException();
     }
 }
