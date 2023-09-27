@@ -27,7 +27,7 @@ public class Triangle : IFigure
         {
             throw new ArgumentException("Incorrect data");
         }
-        
+
         return IsRegularTriangle() ? CalculateAreaForRegularTriangle() : CalculateAreaForTriangle();
     }
 
@@ -36,17 +36,15 @@ public class Triangle : IFigure
     private double CalculateAreaForTriangle()
     {
         var p = (_a + _b + _c) / 2;
-        
+
         return Math.Sqrt(p * (p - _a) * (p - _b) * (p - _c));
     }
 
-    private bool IsRegularTriangle()
-    {
-        return Math.Abs(
+    private bool IsRegularTriangle() =>
+        Math.Abs(
             Math.Pow(_a, 2) +
             Math.Pow(_b, 2) -
             Math.Pow(_c, 2)) < 0.02;
-    }
 
     private bool IsDataCorrect() =>
         !(_a > 0) ||

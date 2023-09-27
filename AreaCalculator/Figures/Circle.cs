@@ -4,18 +4,18 @@ namespace AreaCalculator.Figures;
 
 public class Circle : IFigure
 {
-    private double Radius { get; }
+    private readonly double _radius;
 
     public Circle(double radius)
     {
-        Radius = radius;
+        _radius = radius;
     }
 
     public double GetSquare()
     {
-        if (Radius >= 0)
+        if (_radius >= 0)
         {
-            return Math.PI * Math.Pow(Radius, 2d);
+            return Math.PI * Math.Pow(_radius, 2d);
         }
 
         throw new ArgumentException();
